@@ -1,0 +1,30 @@
+set terminal jpeg
+
+set output 'ThroughputAll.jpeg'
+set title 'Throughput'
+set xlabel 'Time [sec]'
+set ylabel 'Throughput'
+unset key
+plot 'thpTCP.txt' w lines, 'thpUDP.txt' w lines
+
+set output 'ThroughputTCP.jpeg'
+set title 'Throughput'
+set xlabel 'Time [sec]'
+set ylabel 'Throughput of the TCP connection @Node 1'
+unset key
+plot 'thpTCP.txt' w lines
+
+set output 'ThroughputUDP.jpeg'
+set title 'Throughput'
+set xlabel 'Time [sec]'
+set ylabel 'Throughput of the UDP connection @Node 7'
+unset key
+plot 'thpUDP.txt' w lines
+
+set output 'WindowTCP.jpeg'
+set title 'Window size of the TCP connection'
+set xlabel 'Time [sec]'
+set ylabel 'Window size'
+unset key
+plot 'window1_2.txt' w lines
+

@@ -1,0 +1,8 @@
+set terminal jpeg
+
+set output 'ThroughputTCP.jpeg'
+set title 'Throughput of the TCP connection @Node 1'
+set xlabel 'Time [sec]'
+set ylabel 'Throughput [bytes per second]'
+unset key
+plot 'thpTCP.txt' w lines

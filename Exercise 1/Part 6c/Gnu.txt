@@ -1,0 +1,22 @@
+set terminal jpeg
+
+set output 'ThroughputAll.jpeg'
+set title 'Throughput of 5 TCP and 5 UDP connections'
+set xlabel 'Time [sec]'
+set ylabel 'Throughput [bytes per second]'
+unset key
+plot 'thpTCP.txt' w lines, 'thpUDP0.txt' w lines, 'thpTCP8.txt' w lines, 'thpTCP9.txt' w lines, 'thpTCP10.txt' w lines, 'thpTCP11.txt' w lines, 'thpUDP12.txt' w lines, 'thpUDP13.txt' w lines, 'thpUDP14.txt' w lines, 'thpUDP15.txt' w lines
+
+set output 'ThroughputTCP.jpeg'
+set title 'Throughput of the TCP connection @Node 1'
+set xlabel 'Time [sec]'
+set ylabel 'Throughput [bytes per second]'
+unset key
+plot 'thpTCP.txt' w lines
+
+set output 'ThroughputUDP.jpeg'
+set title 'Throughput of the UDP connection (0-7) @Node 7'
+set xlabel 'Time [sec]'
+set ylabel 'Throughput [bytes per second]'
+unset key
+plot 'thpUDP0.txt' w lines

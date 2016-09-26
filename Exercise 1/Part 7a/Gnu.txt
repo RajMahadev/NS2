@@ -1,0 +1,15 @@
+set terminal jpeg
+
+set output 'ThroughputAll.jpeg'
+set title 'Throughput of 5 TCP connections'
+set xlabel 'Time [sec]'
+set ylabel 'Throughput [bytes per second]'
+unset key
+plot 'thpTCP.txt' w lines, 'thpTCP0.txt' w lines, 'thpTCP8.txt' w lines, 'thpTCP9.txt' w lines, 'thpTCP10.txt' w lines
+
+set output 'ThroughputTCP.jpeg'
+set title 'Throughput of the TCP connection @Node 1'
+set xlabel 'Time [sec]'
+set ylabel 'Throughput [bytes per second]'
+unset key
+plot 'thpTCP.txt' w lines
